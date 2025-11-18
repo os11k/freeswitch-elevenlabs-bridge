@@ -1,0 +1,10 @@
+services:
+  freeswitch-elevenlabs-bridge:
+    hostname: freeswitch-elevenlabs-bridge
+    container_name: freeswitch-elevenlabs-bridge
+    build: .
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    env_file:
+      - .env
